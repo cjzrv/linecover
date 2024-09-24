@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 
     initwindow(1600, 800);
 
-    // ÀË¬d¿é¤J°Ñ¼Æ¡A¦pªG¨S¦³ dash «h¦Û°Ê¥[¤W dash
+    // æª¢æŸ¥è¼¸å…¥åƒæ•¸ï¼Œå¦‚æœæ²’æœ‰ dash å‰‡è‡ªå‹•åŠ ä¸Š dash
     for (int i = 1; i < argc; ++i)
     {
         if (argv[i][0] != '-')
@@ -47,24 +47,24 @@ int main(int argc, char **argv)
     {
         switch (opt)
         {
-        case '3': // ¤T¨¤§Î
+        case '3': // ä¸‰è§’å½¢
             is_triangle = true;
             break;
-        case '4': // ¥|Ãä§Î
+        case '4': // å››é‚Šå½¢
             break;
         case 'r': // Random
             random_mode = true;
             break;
-        case 'q': // quick mode (¤£¨Ï¥Î getch() ¤@¤f®ğ°µ§¹)
+        case 'q': // quick mode (ä¸ä½¿ç”¨ getch() ä¸€å£æ°£åšå®Œ)
             quick_mode = true;
             break;
-        case 'h': // ¶À¦Ñ®vªºÂĞ»\ªk
+        case 'h': // é»ƒè€å¸«çš„è¦†è“‹æ³•
             use_cover3 = true;
             break;
-        case 'b': // ¨Ï¥Î¨âºØÂĞ»\ªk¡]°µ¤ñ¸û¥Î¡^
+        case 'b': // ä½¿ç”¨å…©ç¨®è¦†è“‹æ³•ï¼ˆåšæ¯”è¼ƒç”¨ï¼‰
             use_both = true;
             break;
-        case 's': // «O¦s¹Ï§Î
+        case 's': // ä¿å­˜åœ–å½¢
             save_file = true;
             break;
 
