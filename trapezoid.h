@@ -369,6 +369,12 @@ public:
     void load()
     {
         FILE *fp = fopen("save4.txt", "r");
+        if(fp == NULL)
+        {
+            fclose(fp);
+            random();
+            return;
+        }
         for (int i = 0; i < 4; i++)
             fscanf(fp, "%f %f", &p[i].x, &p[i].y);
         fclose(fp);

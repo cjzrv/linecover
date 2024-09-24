@@ -268,6 +268,12 @@ public:
     void load()
     {
         FILE *pFile = fopen("save3.txt", "r");
+        if(pFile == NULL)
+        {
+            fclose(pFile);
+            random();
+            return;
+        }
         for (int i = 0; i < 3; i++)
         {
             fscanf(pFile, "%f %f", &p[i].x, &p[i].y);
